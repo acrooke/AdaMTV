@@ -1,0 +1,45 @@
+[Script Info]
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: None
+PlayResX: {{ resolution.width }}
+PlayResY: {{ resolution.height }}
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+
+Style: AdaHeader,Montserrat.ttf,{{ resolution.height // 34.0 }},&HFFFFD000,&HFFFFD000,&H202020,&H00000000,1,0,0,0,100,100,2,0,1,2,2,1,45,45,135,1
+
+Style: AdaArtist,Montserrat.ttf,{{ resolution.height // 18.0 }},&HFFFFFF,&HFFFFFF,&H202020,&H00000000,1,0,0,0,100,100,0,0,1,2,2,1,45,45,90,1
+
+Style: AdaTitle,Montserrat.ttf,{{ resolution.height // 22.0 }},&H00B8FF,&H00B8FF,&H202020,&H00000000,0,0,0,0,100,100,0,0,1,2,2,1,45,45,55,1
+
+[Events]
+
+{{~ _margin3_p = resolution.width * 0.03 | math.round ~}}
+{{~ _margin5_p = resolution.height * 0.05 | math.round ~}}
+
+{{~ _seek_s = stream_seek.total_seconds | math.round ~}}
+{{~ _duration_s = duration.total_seconds | math.round ~}}
+
+{{~ _min_interval_s = 60 ~}}
+
+{{~ if (_duration_s | math.minus _seek_s) > _min_interval_s ~}}
+{{~ _first_start_ts = timespan.from_seconds (_seek_s | math.plus 2) ~}}
+{{~ _first_end_ts = timespan.from_seconds (_seek_s | math.plus 10) ~}}
+{{~ end ~}}
+
+{{~ if all_artists | array.size == 0 ~}}
+{{~ capture _artists_t ~}}{{ artist }}{{ end }}
+{{~ else ~}}
+{{~ capture _artists_t ~}}{{ all_artists | array.join " | " }}{{ end }}
+{{~ end ~}}
+
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+
+Dialogue: 0,{{ _first_start_ts }}.00,{{ _first_end_ts }}.00,AdaHeader,,45,45,135,,{\fad(300,700)}♪ NOW PLAYING
+
+Dialogue: 0,{{ _first_start_ts }}.00,{{ _first_end_ts }}.00,AdaArtist,,45,45,90,,{\fad(500,700)}{\b1}{{ _artists_t }}
+
+Dialogue: 0,{{ _first_start_ts }}.00,{{ _first_end_ts }}.00,AdaTitle,,45,45,55,,{\fad(700,900)}{{ title }}

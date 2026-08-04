@@ -1,0 +1,23 @@
+services:
+  ersatztv:
+    image: jasongdove/ersatztv:latest
+    container_name: ersatztv
+    environment:
+      - TZ=Europe/London
+    network_mode: host
+    ports:
+      - "8409:8409"
+    volumes:
+      - ./config:/root/.local/share/ersatztv
+      - ./cache:/tmp
+      - ./media:/media:ro
+      - ./fonts:/fonts:ro
+    tmpfs:
+      - /transcode
+    group_add:
+      - "44"
+      - "992"
+    devices:
+      - /dev/dri:/dev/dri
+    restart: unless-stopped
+

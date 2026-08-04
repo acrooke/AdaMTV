@@ -1,0 +1,44 @@
+# ------------------------
+# Runtime
+# ------------------------
+cache/
+backups/
+
+config/logs/
+config/temp-pool/
+config/search-index/
+config/*.sqlite3
+config/*.sqlite3-shm
+config/*.sqlite3-wal
+config/*-secrets.json
+
+# ------------------------
+# Media (keep folder structure)
+# ------------------------
+media/MusicVideos/**
+media/Commercials/**
+media/Movies/**
+media/TVShows/**
+media/Trailers/**
+media/Images/**
+
+# Keep directory structure
+!media/
+!media/.gitkeep
+!media/MusicVideos/
+!media/Commercials/
+!media/Bumpers/
+!media/Idents/
+!media/Trailers/
+
+# Ignore generated videos in bumpers
+media/Bumpers/**/*.mp4
+
+# ------------------------
+# Temporary files
+# ------------------------
+*.swp
+*~
+.DS_Store
+Thumbs.db
+desktop.ini
