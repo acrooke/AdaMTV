@@ -10,6 +10,7 @@
 - [ ] Top-of-hour ident
 - [ ] Lower-third "Now Playing"
 - [ ] Random trivia during videos
+- [ ] Coming Up Next
 
 ## Phase 3
 - [ ] Britpop Hour

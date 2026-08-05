@@ -1,0 +1,19 @@
+name: AdaMTV
+
+channel: AdaMTV 90's
+
+resolution: 1280x720
+
+font: Montserrat
+
+colours:
+
+  cyan: "#59F3FF"
+
+  pink: "#FF4FA3"
+
+  gold: "#FFD966"
+
+  white: "#FFFFFF"
+
+  shadow: "#202020"
