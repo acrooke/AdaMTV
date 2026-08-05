@@ -1,0 +1,48 @@
+[Script Info]
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: None
+PlayResX: {{ resolution.width }}
+PlayResY: {{ resolution.height }}
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+
+; ----------------------------------------------------
+; AdaMTV Lower Third Styles
+; ----------------------------------------------------
+
+Style: AdaDivider,Montserrat.ttf,{{ resolution.height // 36.0 }},&H66F6FF,&H66F6FF,&H202020,&H00000000,0,0,0,0,100,100,0,0,1,1,1,1,50,50,135,1
+
+Style: AdaHeader,Montserrat.ttf,{{ resolution.height // 34.0 }},&H66F6FF,&H66F6FF,&H202020,&H00000000,1,0,0,0,100,100,3,0,1,2,2,1,50,50,110,1
+
+Style: AdaArtist,Montserrat.ttf,{{ resolution.height // 18.0 }},&HFFFFFF,&HFFFFFF,&H202020,&H00000000,1,0,0,0,100,100,0,0,1,2,2,1,50,50,75,1
+
+Style: AdaSong,Montserrat.ttf,{{ resolution.height // 24.0 }},&HCC66FF,&HCC66FF,&H202020,&H00000000,0,0,0,0,100,100,0,0,1,2,2,1,50,50,45,1
+
+[Events]
+
+{{~ _seek_s = stream_seek.total_seconds | math.round ~}}
+{{~ _duration_s = duration.total_seconds | math.round ~}}
+
+{{~ if all_artists | array.size == 0 ~}}
+{{~ capture _artists_t ~}}{{ artist }}{{ end }}
+{{~ else ~}}
+{{~ capture _artists_t ~}}{{ all_artists | array.join " | " }}{{ end }}
+{{~ end ~}}
+
+{{~ _start = timespan.from_seconds (_seek_s | math.plus 2) ~}}
+{{~ _finish = timespan.from_seconds (_seek_s | math.plus 10) ~}}
+
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+
+Dialogue: 0,{{ _start }}.00,{{ _finish }}.00,AdaDivider,,0,0,0,,{\pos(80,540)\fad(250,700)}━━━━━━━━━━━━━━━━━━
+
+Dialogue: 0,{{ _start }}.00,{{ _finish }}.00,AdaHeader,,0,0,0,,{\pos(80,570)\fad(350,700)}NOW PLAYING
+
+Dialogue: 0,{{ _start }}.00,{{ _finish }}.00,AdaArtist,,0,0,0,,{\pos(80,610)\fad(450,700)}{\b1}{{ _artists_t }}
+
+Dialogue: 0,{{ _start }}.00,{{ _finish }}.00,AdaSong,,0,0,0,,{\pos(80,650)\fad(550,900)}{{ title }}
+
+Dialogue: 0,{{ _start }}.00,{{ _finish }}.00,AdaDivider,,0,0,0,,{\pos(80,682)\fad(650,900)}━━━━━━━━━━━━━━━━━━
