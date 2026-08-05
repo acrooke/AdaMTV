@@ -8,7 +8,7 @@
 ## Phase 2
 - [*] ATV logo
 - [ ] Top-of-hour ident
-- [ ] Lower-third "Now Playing"
+- [*] Lower-third "Now Playing"
 - [ ] Random trivia during videos
 - [ ] Coming Up Next
 
