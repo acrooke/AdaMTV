@@ -15,7 +15,7 @@ Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour,
 
 Style: AdaDivider,Montserrat.ttf,{{ resolution.height // 36.0 }},&H66F6FF,&H66F6FF,&H202020,&H00000000,0,0,0,0,100,100,0,0,1,1,1,1,50,50,135,1
 
-Style: AdaHeader,Montserrat.ttf,{{ resolution.height // 34.0 }},&H66F6FF,&H66F6FF,&H202020,&H00000000,1,0,0,0,100,100,3,0,1,2,2,1,50,50,110,1
+Style: AdaHeader,Montserrat.ttf,{{ resolution.height // 40.0 }},&H66F6FF,&H66F6FF,&H202020,&H00000000,1,0,0,0,100,100,8,0,1,2,2,1,50,50,110,1
 
 Style: AdaArtist,Montserrat.ttf,{{ resolution.height // 18.0 }},&HFFFFFF,&HFFFFFF,&H202020,&H00000000,1,0,0,0,100,100,0,0,1,2,2,1,50,50,75,1
 
@@ -41,8 +41,8 @@ Dialogue: 0,{{ _start }}.00,{{ _finish }}.00,AdaDivider,,0,0,0,,{\pos(80,540)\fa
 
 Dialogue: 0,{{ _start }}.00,{{ _finish }}.00,AdaHeader,,0,0,0,,{\pos(80,570)\fad(350,700)}NOW PLAYING
 
-Dialogue: 0,{{ _start }}.00,{{ _finish }}.00,AdaArtist,,0,0,0,,{\pos(80,610)\fad(450,700)}{\b1}{{ _artists_t }}
+Dialogue: 0,{{ _start }}.00,{{ _finish }}.00,AdaArtist,,0,0,0,,{\pos(80,600)\fad(450,700)}{\b1}{{ _artists_t }}
 
-Dialogue: 0,{{ _start }}.00,{{ _finish }}.00,AdaSong,,0,0,0,,{\pos(80,650)\fad(550,900)}{{ title }}
+Dialogue: 0,{{ _start }}.00,{{ _finish }}.00,AdaSong,,0,0,0,,{\pos(80,638)\fad(550,900)}{{ title }}
 
-Dialogue: 0,{{ _start }}.00,{{ _finish }}.00,AdaDivider,,0,0,0,,{\pos(80,682)\fad(650,900)}━━━━━━━━━━━━━━━━━━
+Dialogue: 0,{{ _start }}.00,{{ _finish }}.00,AdaDivider,,0,0,0,,{\pos(80,664)\fad(650,900)}━━━━━━━━━━━━━━━━━━
