@@ -1,0 +1,13 @@
+name: featured-artist-oasis
+text: "FEATURED ARTIST: OASIS"
+location: TopLeft
+opacity_percent: 100
+horizontal_margin_percent: 5
+vertical_margin_percent: 5
+z_index: 10
+base_style: featured
+styles:
+  - name: featured
+    font_family: "OPTIKabel-Heavy"
+    font_size: 32
+    text_color: "#FFFFFF"

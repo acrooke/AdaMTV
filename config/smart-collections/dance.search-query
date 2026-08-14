@@ -1,0 +1,35 @@
+type:music_video AND (
+genre:"Acid House" OR
+genre:"Big Beat" OR
+genre:"Breakbeat" OR
+genre:"Breakbeat Hardcore" OR
+genre:"Chill-out" OR
+genre:"Club" OR
+genre:"Dance" OR
+genre:"Dance-pop" OR
+genre:"Dance-Pop" OR
+genre:"Deep House" OR
+genre:"Disco" OR
+genre:"Diva House" OR
+genre:"Downtempo" OR
+genre:"Dream House" OR
+genre:"Electronica" OR
+genre:"Eurodance" OR
+genre:"Eurohouse" OR
+genre:"Euro-NRG" OR
+genre:"French House" OR
+genre:"Garage House" OR
+genre:"Hi-NRG" OR
+genre:"Hip House" OR
+genre:"House" OR
+genre:"Indie Dance" OR
+genre:"Italo House" OR
+genre:"Nu-Disco" OR
+genre:"Progressive House" OR
+genre:"Rave" OR
+genre:"Speed Garage" OR
+genre:"Stadium House" OR
+genre:"Techno" OR
+genre:"Trance" OR
+genre:"Trip Hop"
+)

@@ -1,0 +1,8 @@
+video_path: /root/.local/share/ersatztv/templates/graphics-elements/motion/adamtv-now-playing-v3.webm
+location: BottomLeft
+horizontal_margin_percent: 0
+vertical_margin_percent: 0
+scale: false
+start_seconds: 0
+end_behavior: disappear
+z_index: 100

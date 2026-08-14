@@ -1,0 +1,33 @@
+content:
+
+  - smart_collection: "All Music Videos"
+    key: "MAIN"
+    order: "shuffle"
+
+  - collection: "We'll Be Right Back"
+    key: "BRB"
+    order: "shuffle"
+
+  - collection: "All Commercials"
+    key: "ADS"
+    order: "shuffle"
+
+  - collection: "We Are Back"
+    key: "BACK"
+    order: "shuffle"
+
+playout:
+
+  - count: 3
+    content: "MAIN"
+
+  - count: 1
+    content: "BRB"
+
+  - count: 2
+    content: "ADS"
+
+  - count: 1
+    content: "BACK"
+
+  - repeat: true

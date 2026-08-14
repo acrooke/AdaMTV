@@ -1,6 +1,6 @@
 services:
   ersatztv:
-    image: jasongdove/ersatztv:latest
+    image: ersatztv/legacy:latest
     container_name: ersatztv
     environment:
       - TZ=Europe/London
@@ -12,6 +12,8 @@ services:
       - ./cache:/tmp
       - ./media:/media:ro
       - ./fonts:/fonts:ro
+      - ./schedules:/schedules
+      - ./scripted-schedules:/app/scripted-schedules
     tmpfs:
       - /transcode
     group_add:

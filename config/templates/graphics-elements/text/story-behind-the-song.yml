@@ -1,0 +1,28 @@
+name: story-behind-the-song
+
+location: BottomLeft
+opacity_percent: 100
+opacity_expression: "if(content_seconds > 30 && content_seconds < 60, 1.0, 0.0)"
+horizontal_margin_percent: 7
+vertical_margin_percent: 18
+width_percent: 70
+text_fit: wrap
+z_index: 250
+
+styles:
+
+- name: heading
+  font_family: "OPTIKabel-Heavy"
+  font_size: 28
+  text_color: "#66F6FF"
+
+- name: story
+  font_family: "OPTIKabel-Heavy"
+  font_size: 22
+  text_color: "#FFFFFF"
+
+base_style: story
+
+text: |
+  [heading]THE STORY BEHIND THE SONG[/heading]
+  {{ MediaItem_Plot }}

@@ -1,0 +1,14 @@
+name: adamtv-now-playing-text
+
+command: /usr/bin/python3
+
+args:
+  - /root/.local/share/ersatztv/scripts/graphics/adamtv-now-playing.py
+
+format: Raw
+pixel_format: bgra
+
+start_seconds: 0
+duration_seconds: 6
+
+z_index: 200

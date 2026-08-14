@@ -1,0 +1,26 @@
+name: adamtv-now-playing-end
+
+location: BottomLeft
+opacity_percent: 100
+opacity_expression: "if(content_seconds > {{ MediaItem_Duration.TotalSeconds - 15 }} && content_seconds < {{ MediaItem_Duration.TotalSeconds - 5 }}, 1.0, 0.0)"
+horizontal_margin_percent: 7
+vertical_margin_percent: 9
+z_index: 200
+
+styles:
+
+- name: artist
+  font_family: "OPTIKabel-Heavy"
+  font_size: 40
+  text_color: "#FFFFFF"
+
+- name: title
+  font_family: "OPTIKabel-Heavy"
+  font_size: 30
+  text_color: "#CC66FF"
+
+base_style: artist
+
+text: |
+  [artist]{{ MediaItem_Artist }}[/artist]
+  [title]{{ MediaItem_Title }}[/title]
