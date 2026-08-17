@@ -1,8 +1,8 @@
-# AdaMTV 90s ITV-style cue dot
+# AdaMTV 90s ITV-style cue dot - authentic v4
 video_path: /root/.local/share/ersatztv/templates/graphics-elements/motion/cue-dot.webm
 location: TopRight
-horizontal_margin_percent: 1
-vertical_margin_percent: 1
+horizontal_margin_percent: 0
+vertical_margin_percent: 0
 scale: true
 scale_width_percent: 4
 start_seconds: {{ MediaItem_Duration.TotalSeconds - 10 }}

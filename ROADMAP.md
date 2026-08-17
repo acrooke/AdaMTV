@@ -22,3 +22,7 @@
 - [ ] ATV Rock
 - [ ] ATV Dance
 - [ ] ATV Christmas
+
+
+Programmes start on the hour exactly
+Bumper showing what programme is coming next and then AND NOW ROCK ANTHEMS

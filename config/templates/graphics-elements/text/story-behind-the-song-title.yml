@@ -1,0 +1,13 @@
+name: story-behind-the-song-title
+text: "THE STORY BEHIND THE SONG"
+location: TopLeft
+opacity_percent: 100
+horizontal_margin_percent: 5
+vertical_margin_percent: 5
+z_index: 10
+base_style: title
+styles:
+  - name: title
+    font_family: "OPTIKabel-Heavy"
+    font_size: 32
+    text_color: "#FFFFFF"

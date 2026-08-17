@@ -1,0 +1,8 @@
+Main scheduling script
+/home/acrooke/Docker/ATV/scripted-schedules/scripts
+
+Graphics overlays for specials (the ones in the top right)
+/home/acrooke/Docker/ATV/config/templates/graphics-elements/text
+
+Intro bumpers for specials
+/home/acrooke/Docker/ATV/media/Bumpers/Specials
